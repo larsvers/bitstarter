@@ -18,6 +18,14 @@ app.get('/', function(request, response) {
   response.send(data);
 });
 
+
+// Render contact page (note slightly shortened code to above)
+app.get('/contact', function(request, response) {
+  response.send(fs.readFileSync('contact.html').toString());
+});
+
+
+
 // Render example.com/orders
 app.get('/orders', function(request, response) {
   global.db.Order.findAll().success(function(orders) {

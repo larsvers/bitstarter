@@ -96,20 +96,33 @@
         color: #ccccff;
       }
       
-      img.center {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
+      .center {
+      margin:0 auto;
+      }
+      
+      .center02 {
+      float:none;
+      margin:0 auto;
       }
 
+      .center03 {
+      display:block;
+      margin: 0 auto;
+      }
+      
       .predikt {
       color:#7f8c8d;
       font-weight:bold;
       }
 
+      .bigfont {
+      font-size:20px;
+      font-weight:bold;
+      }
+
       /* http://support.addthis.com/customer/portal/questions/1136093-share-buttons-in-center-position */      
       div.addthis_toolbox {
-      width:180px;
+      width:190px;
       margin: 0 auto;
       }
     </style>
@@ -128,7 +141,7 @@
 
   </script>
 
-  <!-- carousel  test start -->
+  <!-- carousel script  start -->
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
@@ -140,10 +153,25 @@
     });
   </script>
 
-  <!-- carousel test end --> 
+  <!-- carousel script end --> 
+
+
+<script>
+ $('.nav li').click(function(e) {
+  $('.nav li').removeClass('active');
+   var $this = $(this);
+   if (!$this.hasClass('active')) {
+    $this.addClass('active');
+   }
+   e.preventDefault();
+  });
+</script>
 
   </head>
   <body style="">
+
+
+    <!-- navbar start -->
 
     <!-- Mobile-friendly navbar adapted from example. -->
     <!-- http://twitter.github.io/bootstrap/examples/starter-template.html -->
@@ -156,18 +184,24 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="#">Predikt</a>
+          <a class="brand" href="/">Predikt</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="/orders">Orders</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li class="active"><a href="/">Home</a></li>
+              <!-- <li><a href="#about">About</a></li> -->
+              <!-- <li><a href="/orders">Orders</a></li> -->
+              <li><a href="/contact">Contact</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
+
+    <!-- navbar end -->
+
+
+
+    <!-- headlline start -->
 
 
     <!-- We use row-fluid inside containers to achieve a resizable layout. -->
@@ -191,6 +225,13 @@
       </div>
      </div>
 
+
+    <!-- headline start -->
+
+
+
+    <!-- carousel start -->
+
     <!--  Carousel - consult the Twitter Bootstrap docs at
 	  http://twitter.github.com/bootstrap/javascript.html#carousel -->
     <!-- http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/twitter-bootstrap-101-the-carousel/-->
@@ -198,37 +239,37 @@
     <div id="this-carousel-id" class="carousel slide"><!-- class of slide for animation -->
       <div class="carousel-inner">
 	<div class="item active" style="padding-bottom:4%"><!-- class of active since it's the first item -->
-	  <img src="http://farm6.staticflickr.com/5486/9566627474_db5b15b542.jpg" alt="" style="margin-left:auto; margin-right:auto"/>
+	  <img src="http://farm6.staticflickr.com/5486/9566627474_db5b15b542.jpg" alt="" class="center" />
 	  <div class="carousel-caption">
 	    <p style="text-align:center">Yes ! Rocking idea this Space Booth. But will people actually buy it? And ... will we make some money?</p>
 	  </div>
 	</div>
 	<div class="item" style="padding-bottom:4%">
-	  <img src="http://farm3.staticflickr.com/2826/9595534565_03f25d1bef.jpg" alt="" style="margin-left:auto; margin-right:auto" />
+	  <img src="http://farm3.staticflickr.com/2826/9595534565_03f25d1bef.jpg" alt="" class="center" />
 	  <div class="carousel-caption">
 	    <p style="text-align:center">Lucky us, there's <span class="predikt">Predikt</span> playing shop with our target group...</p>
 	  </div>
 	</div>
 	<div class="item" style="padding-bottom:4%">
-	  <img src="http://farm8.staticflickr.com/7403/9595535817_c5e2bb5b0a.jpg" alt="" style="margin-left:auto; margin-right:auto" />
+	  <img src="http://farm8.staticflickr.com/7403/9595535817_c5e2bb5b0a.jpg" alt="" class="center" />
 	  <div class="carousel-caption">
 	    <p style="text-align:center">...giving us a simulator to play through all sorts of what-if-scenarios about pricing, revenues, customer actions and and and... </p>
 	  </div>
 	</div>
 	<div class="item" style="padding-bottom:4%">
-	  <img src="http://farm3.staticflickr.com/2872/9598333146_dd308b2ce1.jpg" alt="" style="margin-left:auto; margin-right:auto" />
+	  <img src="http://farm3.staticflickr.com/2872/9598333146_dd308b2ce1.jpg" alt="" class="center" />
 	  <div class="carousel-caption">
 	    <p style="text-align:center">...telling us for example - quite importantly - which price we should ask to maximise our revenue.</p>
 	  </div>
 	</div>
 	<div class="item" style="padding-bottom:4%">
-	  <img src="http://farm6.staticflickr.com/5524/9564029637_9cb4079ea7.jpg" alt="" style="margin-left:auto; margin-right:auto" />
+	  <img src="http://farm6.staticflickr.com/5524/9564029637_9cb4079ea7.jpg" alt="" class="center" />
 	  <div class="carousel-caption">
 	    <p style="text-align:center">which makes us happy and our product launch !</p>
 	  </div>
 	</div>
 	<div class="item" style="padding-bottom:4%">
-	  <img src="http://farm4.staticflickr.com/3671/9566469942_60fa69b20a.jpg" alt="" style="margin-left:auto; margin-right:auto" />
+	  <img src="http://farm4.staticflickr.com/3671/9566469942_60fa69b20a.jpg" alt="" class="center" />
 	  <div class="carousel-caption">
 	    <p style="text-align:center">(thank you)</p>
 	  </div>
@@ -240,100 +281,28 @@
       <a class="carousel-control right" href="#this-carousel-id" data-slide="next">&rsaquo;</a>
     </div>
 
-    <!-- /.carousel -->
+    <!-- carousel end -->
 
     <div class="container">
       <div class="row-fluid pitch">
 
-     <!-- commented out .
 
-	     <div class="span5 offset1 video">
-	       <img class="img-polaroid" alt="Placeholder" src="http://placehold.it/480x300">
-	     </div>
 
-     -->
-
-        <!-- We define a new 'actions' div to contain statistics, order, and share buttons.-->
-        <div class="span5 actions" style="float:none; margin:0 auto;">
-          <div class="row-fluid">
-          <div class="span8 offset2">
-            <div class="row-fluid statistics">
-              <div class="span4">
-                <!-- linediv-l and linediv-r give dividing lines that look
-                different in horizontal and vertical layouts, illustrating
-                media queries. -->
-                <div class="linediv-l">
-                <h3>1000</h3> <p>backers</p>
-                </div>
-              </div>
-              <div class="span4">
-                <div class="linediv-c">
-                  <h3>$6000</h3> <p>of $10,000</p>
-                </div>
-              </div>
-              <div class="span4">
-                <div class="linediv-r">
-                <h3>10</h3> <p>days left</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row-fluid">
-          <div class="span10 offset1">
-            <!-- Bootstrap progress bar -->
-            <!-- http://twitter.github.io/bootstrap/components.html#progress -->
-            <div class="thermometer progress active">
-              <div class="bar bar-success" style="width: 60%;"></div>
-              <div class="bar bar-warning" style="width: 40%;"></div>
-            </div>
-          </div>
-          </div>
-          <div class="row-fluid">
-          <div class="span6 offset3 order">
-            <!-- Standard Bootstrap button. -->
-            <!-- http://twitter.github.io/bootstrap/base-css.html#buttons -->
-
-	    <a class="coinbase-button" 
-	       data-code="0392e418c98bf90d629cfb6cb2d29534" 
-	       data-button-style="custom_large" 
-	       data-button-text="Support with Bitcoin"
-	       href="https://coinbase.com/checkouts/0392e418c98bf90d629cfb6cb2d29534">Support with Bitcoin
-	    </a>
-	    <script src="https://coinbase.com/assets/button.js" type="text/javascript"></script>
-            <!-- <button class="btn btn-success btn-large">Preorder</button> -->
-          </div>
-          </div>
-          <div class="row-fluid">
-          <div class="span8 offset2 social">
-            <!-- Social buttons are not included in default Bootstrap. -->
-            <!-- See: http://noizwaves.github.io/bootstrap-social-buttons -->
-            <!-- AddThis Button BEGIN -->
-            <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
-	      <!-- Mail button commented out <a class="addthis_button_preferred_1"></a> -->
-  	      <a class="addthis_button_preferred_2"></a>
-	      <a class="addthis_button_preferred_3"></a>
-	      <!-- Pinterest button commented out  <a class="addthis_button_preferred_4"></a> -->
-	      <a class="addthis_button_compact"></a>
-	      <a class="addthis_counter addthis_bubble_style"></a>
-	    </div>
-	    <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
-	    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51fc20fd0467e36a"></script>
-	    <!-- AddThis Button END -->
-
-          </div>
-          </div>
-        </div>
-        </div>
-      </div>
+      <!-- copy start -->
 
       <!-- Beyond this part the marketing copy begins. -->
       <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/text-align -->
       <!-- http://twitter.github.io/bootstrap/base-css.html#images -->
       <!-- http://placehold.it -->
+
+       <div class="span10 offset1 copy center02">
+	 <img class="center03" src="http://farm4.staticflickr.com/3681/9577110243_13cd73e3ee.jpg" alt="divider">	
+       </div>	
+
       <div class="row-fluid section1">    
         <div class="span10 offset1 copy">	
-         <p><b> One simple question</b> every new product has is 'Will I work?' 
-	   One often falls short answering it, as the only one who really can is the market. 
+         <p><span class="bigfont"> One simple question </span> every new product has is 'Will I work?' 
+	   One often falls short answering it, as the only creature that really can is the market. 
 	   To be precise: The only one who really can is <b>the customer in the marketplace</b>.
          </p>    
          <p>Probably best would then be to develop, design and build the product 
@@ -345,14 +314,14 @@
         </div>	
       </div>	
 	
-       <div class="span10 offset1 copy" style="float:none; margin:0 auto;">
-	 <img class="center" src="http://farm4.staticflickr.com/3681/9577110243_13cd73e3ee.jpg" alt="divider">	
+       <div class="span10 offset1 copy center02">
+	 <img class="center03" src="http://farm4.staticflickr.com/3681/9577110243_13cd73e3ee.jpg" alt="divider">	
        </div>	
 
 
       <div class="row-fluid section2">	
         <div class="span10 offset1 copy">
-         <p><b>Product and particularly Pricing research is a complex animal <span class="predikt">Predikt</span> knows well.</b> 
+         <p><span class="bigfont">Product and particularly Pricing research is a complex animal <span class="predikt">Predikt</span> knows well.</span> 
 	   Let's have a look at what it takes and what it does. 
 	 </p>
 	 <p>
@@ -365,14 +334,14 @@
   	</div>
       </div>
 	
-       <div class="span10 offset1 copy" style="float:none; margin:0 auto;">
-	 <img class="center" src="http://farm4.staticflickr.com/3681/9577110243_13cd73e3ee.jpg" alt="divider">	
+       <div class="span10 offset1 copy center02">
+	 <img class="center03" src="http://farm4.staticflickr.com/3681/9577110243_13cd73e3ee.jpg" alt="divider">	
        </div>	
 
 
       <div class="row-fluid section3">	
         <div class="span10 offset1 copy">
-    	  <p><b> It's like playing the market for you. </b>
+    	  <p><span class="bigfont"> It's like playing the market for you. </span>
             Just copy/paste what you've got in your business case already. What's your product, 
 	    what are the features and - equally important - what iterations of these features are there ($200? test. $300? test. 
 	    ($375.99? yep. test please.) Who are the competitors and who in their right mind will buy it. 
@@ -384,7 +353,7 @@
 	    We'll find the right people and show them what's available in the market. They will 
 	    browse through the products with all their features as they do in a shop or in front of their screens and - pick one. 
 	  </p>
-	  <p><b> Now, that's not very clever yet.</b> It's a little bit clever but rather just sensible, 
+	  <p><span class="bigfont"> Now, that's not very clever yet.</span> It's a little bit clever but rather just sensible, 
 	    as research is truest when realest. The clever thing is that <span class="predikt">Predikt</span>
 	    then adds some analysis-magic that will take each product-dimension we tested apart and enables you to see the impact 
 	    of each feature and price on your product's preference- or  market share. In isolation and in combination with 
@@ -405,7 +374,67 @@
       
           </div>
       </div>
+
+
+      <!-- copy end -->
       
+
+       <div class="span10 offset1 copy center02">
+	 <img class="center03" src="http://farm4.staticflickr.com/3681/9577110243_13cd73e3ee.jpg" alt="divider">	
+       </div>	
+
+
+      <!-- buttons start -->
+
+         <div class="span10 offset1 copy">
+          <div class="row-fluid">
+	   <div class="span6 offset3 order">
+	     <!-- Standard Bootstrap button. -->
+	     <!-- http://twitter.github.io/bootstrap/base-css.html#buttons -->
+
+	     <a class="coinbase-button" 
+		data-code="0392e418c98bf90d629cfb6cb2d29534" 
+		data-button-style="custom_large" 
+		data-button-text="support with bitcoin"
+		href="https://coinbase.com/checkouts/0392e418c98bf90d629cfb6cb2d29534">support with bitcoin
+	     </a>
+	     <script src="https://coinbase.com/assets/button.js" type="text/javascript"></script>
+	     <!-- <button class="btn btn-success btn-large">Preorder</button> -->
+	    </div>
+	   </div>
+	   <div class="row-fluid">
+            <div class="span10 offset2 social" style="padding:0 0 3% 0; float:none; margin:0 auto;">
+            <!-- Social buttons are not included in default Bootstrap. -->
+	     <!-- See: http://noizwaves.github.io/bootstrap-social-buttons -->
+	     <!-- AddThis Button BEGIN -->
+	     <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+	      
+	       <a class="addthis_button_preferred_2"></a>
+	       <a class="addthis_button_preferred_3"></a>
+	       <a class="addthis_button_compact"></a>
+	       <a class="addthis_counter addthis_bubble_style"></a></br></br>
+	       <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+	       <a class="addthis_button_tweet"></a>
+	       <!--<a class="addthis_button_preferred_1"></a>-->
+	       <!--<a class="addthis_button_preferred_4"></a>-->
+	      
+	     </div>
+	     <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+	     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51fc20fd0467e36a"></script>
+
+	    </div>
+	   </div>
+	  </div>
+
+      <!-- buttons end -->
+
+
+       <div class="span10 offset1 copy center02">
+	 <img class="center03" src="http://farm4.staticflickr.com/3681/9577110243_13cd73e3ee.jpg" alt="divider">	
+       </div>	
+
+
+      <!-- faq start -->
       
       <!-- For the FAQ, we introduce a little bit of JS, using the accordion. -->
       <!-- This brings in jquery.js and bootstrap.js as dependencies. -->
@@ -417,7 +446,7 @@
               <div class="accordion-group">
                 <div class="accordion-heading">
                   <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-                    What's the research technique called <b><span class="predikt">Predikt</span></b> applies?
+                    What's the technique <b><span class="predikt">Predikt</span></b> applies?
                   </a>
                 </div>
                 <div id="collapseOne" class="accordion-body collapse">
@@ -436,10 +465,12 @@
                 </div>
                 <div id="collapseTwo" class="accordion-body collapse">
                   <div class="accordion-inner">
-                    It will cost significantly less than comparable research designs cost at the moment. 
-                    There will be a cost connected to the fieldwork (asking the target group) but - again - the cost for 
-                    using the <b><span class="predikt">Predikt</span></b> tool will be drastically
-                    reduced to comparable research designs in the wild.
+		    In short: it'll be much much cheaper 
+                    using <b><span class="predikt">Predikt</span></b> than comparable research designs in the wild.</br>
+                    Run by a traditional research agency, you'd currently pay a juicy amount of money for comparable research
+		    with at least 5 zeros after the first digit (in Dollars/Euros/Pounds that is). Many of the applied proceses can, however,
+		    be automated clearly leading to significant cost-reductions (cutting off up to 3 zeros) as well as even design-benefits! 
+		    Additionally there are more cost-reducers in the pipeline, apart from automation... 
                   </div>
                 </div>
               </div>
@@ -482,6 +513,8 @@
           </div>
 
       </div>
+
+      <!-- faq end -->
 
       <!-- Not crucial, but we put this under a CC By-SA 3.0 license. -->
       <!-- http://creativecommons.org/licenses/ -->
